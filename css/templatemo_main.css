@@ -86,10 +86,24 @@ img {
 	text-decoration: none;
 }
 
+.img-row{
+    margin-top: 15px;
+}
+.img-row:first-child{
+    margin-top: 0;
+}
+
 img.slide {
     width: 100%; 
     z-index: -9999999; 
     position: absolute;
+}
+
+img.event-image {
+    width: 100%;
+    height: auto;
+    padding:2px;
+    border:2px solid #5054B0;
 }
 
 .active {
@@ -114,11 +128,19 @@ img.slide {
 }
 
 .templatemo-content {
-    position: relative;
+    position: fixed;
     overflow: hidden; 
-    margin-top: 50%;
-    transform: translateY(-50%);
+    //margin-top: 50%;
+    //transform: translateY(-50%);
 
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh;  /*These two lines are counted as one :-)*/   
+
+    display: flex;
+    align-items: center;
 }
 
 .templatemo-content section {
@@ -143,6 +165,15 @@ img.slide {
     color: #000;
     font-size: 18px;
     text-indent: 25px;
+}
+
+#Address{
+    text-indent: 0;
+    margin-left: 25px;
+}
+
+.templatemo-content p.no-indent {
+    text-indent: 0;
 }
 
 .menu {
@@ -200,9 +231,9 @@ img.slide {
     background-color: rgba(0,0,0,0.5);
 }
 
-#map-canvas {
-	height: 256px;
-	margin-bottom: 10px;
+
+#loginForm{
+    height: 100%;
 }
 
 .templatemo-content {
@@ -230,13 +261,11 @@ img.slide {
 
 @media (max-width: 991px) {
     .footer {
-        overflow:hidden; 
-        position:static;
+        overflow:hidden;
+        position: none; 
         text-align: center;
-        
-    }
-    .footer-text {
-        margin-left: 0;
+        margin: auto auto 0 auto;
+        transform: translateY(75%);
     }
 
     .templatemo-content{
@@ -278,5 +307,29 @@ img.slide {
     .templatemo-site-title img{
         float: right;
 
+    }
+
+    img.event-image {
+        width: 40%;
+        height: auto;
+        display: block;
+        margin: 20px auto 20px auto;
+    }
+    
+    .col-sm-9.col-md-9{
+        text-align: justify;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #line{
+        content: "";
+        display: block;
+        height: 1px;
+        width: 100%;
+        background:  black;
+    }
+    .row.img-row{
+        margin-bottom: 0;
+        margin-top: 0;
     }
 }
