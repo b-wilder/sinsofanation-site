@@ -112,6 +112,8 @@ img.event-image {
 
 .inactive {
     left: 703px;
+    width: 100%;
+    right: 0;
     display: none;
 }
 
@@ -310,7 +312,7 @@ img.event-image {
     }
 
     img.event-image {
-        width: 40%;
+        //width: 40%;
         height: auto;
         display: block;
         margin: 20px auto 20px auto;
